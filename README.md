@@ -13,6 +13,9 @@ npm run start
 # or
 yarn dev
 ```
+**Note:**
+* **pnpm** will be **FAILED**, because this project will copy file form node_modules to public folder in **next.config.js**, and pnpm will not copy the file for [hard-linked](https://pnpm.io/motivation).
+* if you get **digital envelope** error, try to use `export NODE_OPTIONS=--openssl-legacy-provider; npm run dev` by this [issue](https://github.com/microsoft/onnxruntime-nextjs-template/issues/3#issuecomment-1603232707)
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
